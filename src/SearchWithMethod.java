@@ -9,8 +9,7 @@ public class SearchWithMethod {
         int length = 0;
         try {
             length = scanner.nextInt();
-        }
-        catch (InputMismatchException e) {
+        } catch (InputMismatchException e) {
             System.out.println("Error datatype!");
         }catch (Exception e) {
             System.out.println("Error!");
@@ -29,8 +28,15 @@ public class SearchWithMethod {
             System.out.println("Error!");
         }
 
+        try {
         int min = Minvalue(array);
-        System.out.println("The smallest element in the array is: " + array[min]);
+            System.out.println("The smallest element in the array is: " + array[min]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error!");
+        } catch (Exception e) {
+            System.out.println("Error!");
+        }
+
     }
     public static int Minvalue(int []array) {
         int min = array[0];
